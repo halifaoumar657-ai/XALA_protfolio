@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services — XALA SN</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+
+        /* =====================================================
+           SERVICES — XALA SN
+           SAME MOOD AS ABOUT
+        ===================================================== */
+
+        body {
+            background: #050505;
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           SERVICES SECTION
+        ===================================================== */
+
+        .services-section {
+
+            min-height: 100vh;
+
+            padding: 150px 0 140px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #050505 0%,
+                    #080808 100%
+                );
+
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
+
+        .services-header {
+
+            max-width: 720px;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .services-label {
+
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            color: #d4af37;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+        }
+
+
+        .services-header h1 {
+
+            max-width: 700px;
+
+            margin: 0;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(
+                42px,
+                6vw,
+                68px
+            );
+
+            font-weight: 800;
+
+            line-height: 1.06;
+
+            letter-spacing: -3px;
+
+            color: #ffffff;
+
+        }
+
+
+        .services-header h1 span {
+
+            display: block;
+
+            color: #626262;
+
+        }
+
+
+        .services-header p {
+
+            max-width: 600px;
+
+            margin-top: 24px;
+
+            color: #b8b8b8;
+
+            font-size: 14px;
+
+            line-height: 1.85;
+
+        }
+
+
+        /* =====================================================
+           SERVICES GRID
+        ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            border-top: 1px solid rgba(255,255,255,0.09);
+
+            border-left: 1px solid rgba(255,255,255,0.09);
+
+        }
+
+
+        /* =====================================================
+           SERVICE
+        ===================================================== */
+
+        .service-item {
+
+            position: relative;
+
+            min-height: 360px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 34px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.035),
+                    rgba(255,255,255,0.008)
+                );
+
+            border-right:
+                1px solid rgba(255,255,255,0.09);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.09);
+
+            transition:
+                transform 0.4s ease,
+                border-color 0.4s ease,
+                background 0.4s ease;
+
+        }
+
+
+        /* =====================================================
+           GOLD GLOW
+        ===================================================== */
+
+        .service-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            top: -100px;
+            right: -100px;
+
+            border-radius: 50%;
+
+            background: #d4af37;
+
+            filter: blur(90px);
+
+            opacity: 0;
+
+            transition: opacity 0.4s ease;
+
+        }
+
+
+        .service-item:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(212,175,55,0.28);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.05),
+                    rgba(255,255,255,0.012)
+                );
+
+        }
+
+
+        .service-item:hover::before {
+
+            opacity: 0.08;
+
+        }
+
+
+        /* =====================================================
+           TOP
+        ===================================================== */
+
+        .service-top {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .service-number {
+
+            color: #d4af37;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .service-arrow {
+
+            width: 36px;
+            height: 36px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid rgba(255,255,255,0.09);
+
+            border-radius: 8px;
+
+            color: #777777;
+
+            font-size: 15px;
+
+            transition: 0.35s ease;
+
+        }
+
+
+        .service-item:hover .service-arrow {
+
+            border-color:
+                rgba(212,175,55,0.35);
+
+            color: #d4af37;
+
+            transform:
+                translate(3px,-3px);
+
+        }
+
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .service-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-top: auto;
+
+            padding-top: 70px;
+
+        }
+
+
+        .service-content h2 {
+
+            margin: 0;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            letter-spacing: -0.7px;
+
+            color: #ffffff;
+
+        }
+
+
+        .service-content p {
+
+            max-width: 500px;
+
+            margin-top: 12px;
+
+            color: #858585;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           TAGS
+        ===================================================== */
+
+        .service-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 22px;
+
+        }
+
+
+        .service-tags span {
+
+            padding: 6px 9px;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 5px;
+
+            background: rgba(255,255,255,0.02);
+
+            color: #777777;
+
+            font-size: 9px;
+
+            transition: 0.35s ease;
+
+        }
+
+
+        .service-item:hover .service-tags span {
+
+            border-color:
+                rgba(212,175,55,0.22);
+
+            color: #b8b8b8;
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .services-section {
+
+                padding: 120px 0 100px;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .service-item {
+
+                min-height: 330px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .services-section {
+
+                padding: 100px 0 80px;
+
+            }
+
+
+            .services-header {
+
+                margin-bottom: 45px;
+
+            }
+
+
+            .services-header h1 {
+
+                font-size: 40px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .services-header p {
+
+                font-size: 12px;
+
+            }
+
+
+            .service-item {
+
+                min-height: 300px;
+
+                padding: 25px;
+
+            }
+
+
+            .service-content {
+
+                padding-top: 55px;
+
+            }
+
+
+            .service-content h2 {
+
+                font-size: 21px;
+
+            }
+
+
+            .service-content p {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main>
+
+        <section class="services-section" id="services">
+
+            <div class="container">
+
+
+                <!-- INTRODUCTION -->
+
+                <div class="services-header">
+
+                    <span class="services-label">
+                        CE QUE NOUS FAISONS
+                    </span>
+
+                    <h1>
+
+                        Des solutions pensées
+
+                        <span>
+                            pour créer de la valeur.
+                        </span>
+
+                    </h1>
+
+                    <p>
+
+                        Nous combinons technologie, stratégie et management
+                        pour accompagner les entreprises, entrepreneurs et
+                        organisations dans leur transformation et leur croissance.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                01
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                Développement web
+                            </h2>
+
+                            <p>
+
+                                Nous concevons des sites web, plateformes et
+                                applications modernes, performants et adaptés
+                                aux objectifs de votre activité.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Sites web</span>
+
+                                <span>Applications</span>
+
+                                <span>E-commerce</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                02
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                Solutions PME
+                            </h2>
+
+                            <p>
+
+                                Nous développons des outils numériques simples
+                                pour améliorer la gestion, structurer les activités
+                                et faciliter la prise de décision.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Gestion des stocks</span>
+
+                                <span>Digitalisation</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                03
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                Transformation digitale
+                            </h2>
+
+                            <p>
+
+                                Nous accompagnons les organisations dans la
+                                modernisation de leurs processus et l'intégration
+                                intelligente des technologies numériques.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Stratégie</span>
+
+                                <span>Processus</span>
+
+                                <span>Automatisation</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                04
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                Management de projet
+                            </h2>
+
+                            <p>
+
+                                Nous structurons et pilotons les projets avec
+                                une approche méthodique afin de transformer
+                                les objectifs en résultats concrets.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Planification</span>
+
+                                <span>Pilotage</span>
+
+                                <span>Suivi</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 05 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                05
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                XALA Academy
+                            </h2>
+
+                            <p>
+
+                                Nous transmettons les compétences nécessaires
+                                pour mieux comprendre la technologie, le management
+                                et les outils professionnels d'aujourd'hui.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Technologie</span>
+
+                                <span>Management</span>
+
+                                <span>Compétences</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 06 -->
+
+                    <article class="service-item">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                06
+                            </span>
+
+                            <span class="service-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h2>
+                                XALA Market
+                            </h2>
+
+                            <p>
+
+                                Une plateforme pensée pour connecter les entreprises
+                                et entrepreneurs aux opportunités du commerce
+                                et du digital.
+
+                            </p>
+
+
+                            <div class="service-tags">
+
+                                <span>Commerce</span>
+
+                                <span>Marketplace</span>
+
+                                <span>Digital</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- =====================================================
+     BOUTONS FLOTTANTS
+===================================================== -->
+
+<!-- Retour en haut -->
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Retour en haut"
+>
+    ↑
+</button>
+
+
+<!-- WhatsApp -->
+<a
+    href="https://wa.me/221763623959"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contacter XALA SN sur WhatsApp"
+>
+    <span>◉</span>
+</a>
+</body>
+
+</html>
